@@ -1,5 +1,4 @@
-pip install poetry
-poetry install
-poetry run python manage.py makemigrations
-poetry run python manage.py migrate
-poetry run python manage.py runserver
+echo "BUILD START" python3.9 -m ensurepip 
+python3.9 -m pip install -r requirements.txt 
+python3.9 manage.py collectstatic --noinput --clear 
+echo "BUILD END"

@@ -29,3 +29,6 @@ urlpatterns = [
     path("lists/<int:id_lista>/", views.list_detail_view, name="list_detail"),
     path('accounts/', include('django.contrib.auth.urls')),
 ]
+
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT) 
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
