@@ -1,2 +1,2 @@
-poetry install
-poetry run python manage.py runserver
+install
+run python manage.py runserver
